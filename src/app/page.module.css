@@ -26,6 +26,39 @@
     --button-secondary-hover: #1a1a1a;
   }
 }
+.wrap { 
+        min-height: 100vh; 
+        display: grid; 
+        place-items: center; 
+        padding: var(--pad); 
+      }
+.card {
+  background: var(--mint-green);
+  border: 1px solid var(--mint-green);
+  border-radius: 16px;
+  padding: calc(var(--pad) * 1.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  width: min(460px, 90vw);
+}
+.title { 
+  margin: 0 0 8px; 
+  font-size: 28px; 
+  color: var(--dark-purple);}
+.subtitle { 
+  margin: 0 0 20px; 
+  color: #555; 
+  color: var(--claret)}
+.button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: var(--claret);
+  color:  var(--white);
+  cursor: pointer;
+}
+button:hover { background: var(--dark-purple); }
 
 .main {
   display: flex;
