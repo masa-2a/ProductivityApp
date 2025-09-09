@@ -1,9 +1,11 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import styles from "./page.module.css";
 
 export default function Home() {
+  const router = useRouter();
   function onStart() {
-    alert("Let's get to work!");
+    router.push('/mainpage');
   }
 
   return (

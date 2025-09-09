@@ -1,0 +1,89 @@
+.workspace {
+    display: grid;
+    grid-template-columns: 260px 380px 1fr;
+    gap: 16px;
+    min-height: 80vh;
+    padding: var(--pad);
+}
+
+.col {
+    background: var(--white);
+    border: 1px solid var(--celadon);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.col-header {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--celadon);
+    font-weight: 600;
+    color: var(--dark-purple);
+}
+
+.col-body {
+    padding: 12px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+/* list items */
+.item {
+    padding: 8px 10px;
+    border: 1px solid var(--celadon);
+    border-radius: 10px;
+    background: var(--mint-green);
+    cursor: pointer;
+}
+
+.item:hover {
+    background: color-mix(in srgb, var(--mint-green) 85%, white);
+}
+
+.item.active {
+    border-color: var(--claret);
+    outline: 2px solid color-mix(in srgb, var(--claret) 30%, transparent);
+}
+
+/* add buttons */
+.add-btn {
+    margin-top: auto;
+    /* pushes it near the bottom */
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    background: var(--claret);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: var(--dark-purple);
+}
+
+/* right column split: top = details, bottom = future plant shelf */
+.right-split {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+}
+
+.details {
+    padding: 12px;
+    border-bottom: 1px solid var(--celadon);
+}
+
+.shelf-placeholder {
+    padding: 12px;
+    display: grid;
+    place-items: center;
+    color: #666;
+    background: radial-gradient(circle at center,
+            var(--mint-green) 0%,
+            var(--celadon) 60%,
+            var(--mint-green) 100%);
+}
